@@ -1,9 +1,9 @@
 using UnityEngine;
 using com.MazeGame.Model;
 
-namespace com.MazeGame.View
+namespace com.MazeGame.View.Field.Cells
 {
-  public class Cell : MonoBehaviour
+  public class Cell : DestroyableBehaviour
   {
     [SerializeField]
     private GameObject _topWall;
