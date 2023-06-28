@@ -60,7 +60,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9197278858487101107}
   - component: {fileID: 4702730228103223883}
-  - component: {fileID: 1534191070204902388}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -101,18 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cellPrefab: {fileID: 3005226704668977842, guid: de09223ecf85a584e83f1d7c5bc51733, type: 3}
---- !u!225 &1534191070204902388
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4604887036548671855}
-  m_Enabled: 1
-  m_Alpha: 0.65
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &5613003502205455209
 GameObject:
   m_ObjectHideFlags: 0
