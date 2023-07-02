@@ -39,7 +39,6 @@ SpriteAtlas:
     - {fileID: 2800000, guid: a14b5e9677a172d45983746b3e630050, type: 3}
     - {fileID: 2800000, guid: 5ef1969c96b9bae47984cd4ed7dbcde3, type: 3}
     - {fileID: 2800000, guid: ae662ca44aa35fc48bbafae82b4bb89f, type: 3}
-    - {fileID: 2800000, guid: 6d09c028a43f2b841ad780cb19b921af, type: 3}
     - {fileID: 2800000, guid: 979cecd5e24f8954e9c70a4a0fdeda57, type: 3}
     - {fileID: 2800000, guid: c6beca0b9b98a8840a06131d32d874a5, type: 3}
     - {fileID: 102900000, guid: c7c102a356fd73342a12250f4204a4f1, type: 3}
@@ -54,7 +53,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 979cecd5e24f8954e9c70a4a0fdeda57, type: 3}
   - {fileID: 21300000, guid: 1b698b8693739754ca40891c6d212f59, type: 3}
   - {fileID: 21300000, guid: a14b5e9677a172d45983746b3e630050, type: 3}
-  - {fileID: 21300000, guid: 6d09c028a43f2b841ad780cb19b921af, type: 3}
   - {fileID: 21300000, guid: d1c16d586ddc9d342822f2b369d9ae2d, type: 3}
   - {fileID: 21300000, guid: 18bae6e87b03db544a453756173051a9, type: 3}
   - {fileID: 21300000, guid: 62d2b09a7ac1db341b9b5ef917785ec0, type: 3}
@@ -71,7 +69,6 @@ SpriteAtlas:
   - Arrow
   - Lightning_04
   - GlowCircle
-  - BlueCircle
   - Lightning_01
   - WallCornerInner
   - Lightning_03

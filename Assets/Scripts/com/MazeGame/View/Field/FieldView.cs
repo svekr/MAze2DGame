@@ -3,7 +3,7 @@ using com.MazeGame.Model;
 
 namespace com.MazeGame.View.Field
 {
-  public class MazeView : MonoBehaviour
+  public class FieldView : MonoBehaviour
   {
     [SerializeField]
     private RectTransform _layersContainer;

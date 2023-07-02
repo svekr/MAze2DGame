@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dceb4574f54635c459a4c893ccd4cabb, type: 3}
   m_Name: LevelPreconfigured 2
   m_EditorClassIdentifier: 
-  id: 2
-  _durationSeconds: 0
+  _id: 2
+  _durationSeconds: 30
   _cells:
   - index: {x: 0, y: 0}
     directions: 1
-    gates: 0
+    gates: 8
   - index: {x: 0, y: 1}
     directions: 5
     gates: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     gates: 0
   - index: {x: 4, y: 8}
     directions: 10
-    gates: 0
+    gates: 1
   - index: {x: 5, y: 0}
     directions: 10
     gates: 0

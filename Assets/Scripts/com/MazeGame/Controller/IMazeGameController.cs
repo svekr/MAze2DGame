@@ -8,6 +8,8 @@ namespace com.MazeGame.Controller
     event Action<long> OnTimeElapsedChanged;
     event Action<long> OnTimeRemainChanged;
     event Action<int> OnDistancePassedChanged;
+    event Action<bool> OnPausedChanged;
+    event Action OnLevelFailed;
 
     LevelModel LevelModel { get; }
 
@@ -17,9 +19,15 @@ namespace com.MazeGame.Controller
 
     int DistancePassed { get; }
 
+    bool HasTimeLimit { get; }
+
     bool Paused { get; set; }
 
-    void PlayLevel(LevelModel level, Action<bool> onComplete);
+    void PlayLevel(LevelModel level, Action<bool> onEndLevel);
+
+    void Reset();
+
+    void SetPaused(bool value);
 
     void OnTimeUpdate(float deltaTime);
   }

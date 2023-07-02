@@ -54,10 +54,16 @@ namespace com.Managers.SceneManagement
 
     }
 
+    virtual protected void SceneReadyHandler()
+    {
+
+    }
+
     public void GoToNextScene(NextSceneStarter sceneStarter)
     {
       if (sceneStarter != null)
       {
+        Logger?.Log($"Scene '{Location}' tries to start next scene");
         sceneStarter.StartNextScene(OnNextSceneReady);
       }
     }
@@ -78,7 +84,8 @@ namespace com.Managers.SceneManagement
       SceneController nextSceneController = FindSceneController(nextScene);
       if (nextSceneController != null)
       {
-        Logger?.Log($"Scene '{nextScene.name}' is ready");
+        Logger?.Log($"Scene '{nextScene.name}' is ready. New location is '{nextSceneController.Location}'");
+        nextSceneController.SceneReadyHandler();
       } else {
         Logger?.LogWarning($"Scene '{nextScene.name}' is ready (SceneController not found)");
       }

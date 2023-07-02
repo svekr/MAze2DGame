@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dceb4574f54635c459a4c893ccd4cabb, type: 3}
   m_Name: LevelPreconfigured 1
   m_EditorClassIdentifier: 
-  id: 1
+  _id: 1
   _durationSeconds: 0
   _cells:
   - index: {x: 0, y: 0}

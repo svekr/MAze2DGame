@@ -11,7 +11,7 @@ namespace com.MazeGame.Model
     public int Duration { get; private set; } = 0;
 
     public LevelModel(int id, CellModel[,] fieldModel, int duration) {
-      Id = Id;
+      Id = id;
       FieldModel = fieldModel;
       Duration = duration;
     }
