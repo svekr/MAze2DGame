@@ -4,9 +4,17 @@ namespace com.MazeGame.View.Field.Walls
 {
   public class WallOuterDecoration : WallDecoration
   {
+    private void Awake()
+    {
+      gameObject.SetActive(false);
+    }
+
     override public void Set(Direction directions)
     {
-      gameObject.SetActive((directions & _side) == _side);
+      if (directions.HasFlag(_side))
+      {
+        gameObject.SetActive(true);
+      }
     }
   }
 }

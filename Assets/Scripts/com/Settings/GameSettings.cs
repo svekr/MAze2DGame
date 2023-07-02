@@ -6,8 +6,8 @@ namespace com.Settings {
   public class GameSettings : ScriptableObject
   {
     [SerializeField]
-    private List<LevelSettings> _levels;
+    private List<LevelSettingsBase> _levels;
 
-    public List<LevelSettings> Levels => _levels;
+    public List<LevelSettingsBase> Levels => _levels;
   }
 }

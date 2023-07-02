@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dceb4574f54635c459a4c893ccd4cabb, type: 3}
+  m_Name: LevelPreconfigured 2
+  m_EditorClassIdentifier: 
+  id: 2
+  _durationSeconds: 0
+  _cells:
+  - index: {x: 0, y: 0}
+    directions: 1
+    gates: 0
+  - index: {x: 0, y: 1}
+    directions: 5
+    gates: 0
+  - index: {x: 0, y: 2}
+    directions: 5
+    gates: 0
+  - index: {x: 0, y: 3}
+    directions: 5
+    gates: 0
+  - index: {x: 0, y: 4}
+    directions: 6
+    gates: 0
+  - index: {x: 0, y: 5}
+    directions: 1
+    gates: 0
+  - index: {x: 0, y: 6}
+    directions: 5
+    gates: 0
+  - index: {x: 0, y: 7}
+    directions: 7
+    gates: 0
+  - index: {x: 0, y: 8}
+    directions: 4
+    gates: 0
+  - index: {x: 1, y: 0}
+    directions: 3
+    gates: 0
+  - index: {x: 1, y: 1}
+    directions: 5
+    gates: 0
+  - index: {x: 1, y: 2}
+    directions: 5
+    gates: 0
+  - index: {x: 1, y: 3}
+    directions: 6
+    gates: 0
+  - index: {x: 1, y: 4}
+    directions: 10
+    gates: 0
+  - index: {x: 1, y: 5}
+    directions: 3
+    gates: 0
+  - index: {x: 1, y: 6}
+    directions: 6
+    gates: 0
+  - index: {x: 1, y: 7}
+    directions: 9
+    gates: 0
+  - index: {x: 1, y: 8}
+    directions: 6
+    gates: 0
+  - index: {x: 2, y: 0}
+    directions: 11
+    gates: 0
+  - index: {x: 2, y: 1}
+    directions: 5
+    gates: 0
+  - index: {x: 2, y: 2}
+    directions: 6
+    gates: 0
+  - index: {x: 2, y: 3}
+    directions: 8
+    gates: 0
+  - index: {x: 2, y: 4}
+    directions: 9
+    gates: 0
+  - index: {x: 2, y: 5}
+    directions: 12
+    gates: 0
+  - index: {x: 2, y: 6}
+    directions: 10
+    gates: 0
+  - index: {x: 2, y: 7}
+    directions: 3
+    gates: 0
+  - index: {x: 2, y: 8}
+    directions: 14
+    gates: 0
+  - index: {x: 3, y: 0}
+    directions: 10
+    gates: 0
+  - index: {x: 3, y: 1}
+    directions: 3
+    gates: 0
+  - index: {x: 3, y: 2}
+    directions: 14
+    gates: 0
+  - index: {x: 3, y: 3}
+    directions: 3
+    gates: 0
+  - index: {x: 3, y: 4}
+    directions: 5
+    gates: 0
+  - index: {x: 3, y: 5}
+    directions: 6
+    gates: 0
+  - index: {x: 3, y: 6}
+    directions: 9
+    gates: 0
+  - index: {x: 3, y: 7}
+    directions: 12
+    gates: 0
+  - index: {x: 3, y: 8}
+    directions: 10
+    gates: 0
+  - index: {x: 4, y: 0}
+    directions: 10
+    gates: 0
+  - index: {x: 4, y: 1}
+    directions: 10
+    gates: 0
+  - index: {x: 4, y: 2}
+    directions: 10
+    gates: 0
+  - index: {x: 4, y: 3}
+    directions: 9
+    gates: 0
+  - index: {x: 4, y: 4}
+    directions: 6
+    gates: 0
+  - index: {x: 4, y: 5}
+    directions: 11
+    gates: 0
+  - index: {x: 4, y: 6}
+    directions: 5
+    gates: 0
+  - index: {x: 4, y: 7}
+    directions: 4
+    gates: 0
+  - index: {x: 4, y: 8}
+    directions: 10
+    gates: 0
+  - index: {x: 5, y: 0}
+    directions: 10
+    gates: 0
+  - index: {x: 5, y: 1}
+    directions: 10
+    gates: 0
+  - index: {x: 5, y: 2}
+    directions: 9
+    gates: 0
+  - index: {x: 5, y: 3}
+    directions: 6
+    gates: 0
+  - index: {x: 5, y: 4}
+    directions: 10
+    gates: 0
+  - index: {x: 5, y: 5}
+    directions: 9
+    gates: 0
+  - index: {x: 5, y: 6}
+    directions: 5
+    gates: 0
+  - index: {x: 5, y: 7}
+    directions: 6
+    gates: 0
+  - index: {x: 5, y: 8}
+    directions: 10
+    gates: 0
+  - index: {x: 6, y: 0}
+    directions: 8
+    gates: 0
+  - index: {x: 6, y: 1}
+    directions: 10
+    gates: 0
+  - index: {x: 6, y: 2}
+    directions: 2
+    gates: 0
+  - index: {x: 6, y: 3}
+    directions: 10
+    gates: 0
+  - index: {x: 6, y: 4}
+    directions: 9
+    gates: 0
+  - index: {x: 6, y: 5}
+    directions: 5
+    gates: 0
+  - index: {x: 6, y: 6}
+    directions: 6
+    gates: 0
+  - index: {x: 6, y: 7}
+    directions: 9
+    gates: 0
+  - index: {x: 6, y: 8}
+    directions: 12
+    gates: 0
+  - index: {x: 7, y: 0}
+    directions: 3
+    gates: 0
+  - index: {x: 7, y: 1}
+    directions: 12
+    gates: 0
+  - index: {x: 7, y: 2}
+    directions: 9
+    gates: 0
+  - index: {x: 7, y: 3}
+    directions: 12
+    gates: 0
+  - index: {x: 7, y: 4}
+    directions: 3
+    gates: 0
+  - index: {x: 7, y: 5}
+    directions: 5
+    gates: 0
+  - index: {x: 7, y: 6}
+    directions: 12
+    gates: 0
+  - index: {x: 7, y: 7}
+    directions: 3
+    gates: 0
+  - index: {x: 7, y: 8}
+    directions: 6
+    gates: 0
+  - index: {x: 8, y: 0}
+    directions: 9
+    gates: 0
+  - index: {x: 8, y: 1}
+    directions: 5
+    gates: 0
+  - index: {x: 8, y: 2}
+    directions: 5
+    gates: 0
+  - index: {x: 8, y: 3}
+    directions: 5
+    gates: 0
+  - index: {x: 8, y: 4}
+    directions: 13
+    gates: 0
+  - index: {x: 8, y: 5}
+    directions: 5
+    gates: 0
+  - index: {x: 8, y: 6}
+    directions: 5
+    gates: 0
+  - index: {x: 8, y: 7}
+    directions: 12
+    gates: 0
+  - index: {x: 8, y: 8}
+    directions: 8
+    gates: 0

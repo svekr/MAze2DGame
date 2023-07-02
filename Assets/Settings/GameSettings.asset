@@ -13,13 +13,10 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   _levels:
-  - {fileID: 11400000, guid: 994f15721e4f6d5468ac58fc9460bbc0, type: 2}
-  - {fileID: 11400000, guid: d4fb910447d25ab4d8d8461c64e87a41, type: 2}
-  - {fileID: 11400000, guid: 926639ed150e5ef42b999aac002f3415, type: 2}
-  - {fileID: 11400000, guid: 9b62d0f8f7f801544b8c464af983419e, type: 2}
-  - {fileID: 11400000, guid: fbecc3a5ef753c743ba69aa4f3977243, type: 2}
-  - {fileID: 11400000, guid: 2c9997adfee8ae440a8fd83013c17340, type: 2}
-  - {fileID: 11400000, guid: 4beb1ef660d59d24faa4828bc4ea75dd, type: 2}
-  - {fileID: 11400000, guid: a5d5559809ef9974db1961f8801aeb08, type: 2}
-  - {fileID: 11400000, guid: 3c1c453673421c74792cf54bdee5c802, type: 2}
-  - {fileID: 11400000, guid: 617df876e4273214093d53011e303f15, type: 2}
+  - {fileID: 11400000, guid: 2001a21f7c49f2b43a3249e80d2b82f9, type: 2}
+  - {fileID: 11400000, guid: fc95f0d8233c2754b9b2a16d362fcd27, type: 2}
+  - {fileID: 11400000, guid: 16a2e45a733931b4c84055a0432cd11d, type: 2}
+  - {fileID: 11400000, guid: 455b62b5b5e4da0428422f0e800c906e, type: 2}
+  - {fileID: 11400000, guid: 6ee272722b033f643b55a22acd358a21, type: 2}
+  - {fileID: 11400000, guid: b336182c8af035444bebc72df3988476, type: 2}
+  - {fileID: 11400000, guid: edb9d340121dbc849b30cf381deec73e, type: 2}

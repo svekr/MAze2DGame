@@ -3,51 +3,65 @@ using com.MazeGame.Model;
 
 namespace com.MazeGame.View.Field
 {
-  abstract public class CellsView<T> : MonoBehaviour where T: DestroyableBehaviour
+  abstract public class CellsView : MonoBehaviour
+  {
+    protected Vector2 _fieldSize = Vector2.zero;
+
+    public Vector2 Size => _fieldSize;
+
+    abstract public void SetData(CellModel[,] fieldModel);
+  }
+
+  abstract public class CellsView<T> : CellsView where T: CellView
   {
     [SerializeField]
     protected T _cellPrefab;
 
     protected Vector2 _cellSize = Vector2.zero;
-    protected Vector2 _fieldSize = Vector2.zero;
     protected T[,] _cells = null;
 
-    public Vector2 Size => _fieldSize;
+    override public void SetData(CellModel[,] fieldModel) {
+      int fieldWidth = fieldModel.GetLength(0);
+      int fieldHeight = fieldModel.GetLength(1);
 
-    public void SetData(Vertex[,] cellsData) {
-      int fieldWidth = cellsData.GetLength(0);
-      int fieldHeight = cellsData.GetLength(1);
-
-      _cellSize = _cellPrefab.GetComponent<RectTransform>().rect.size;
-      _fieldSize = new Vector2(_cellSize.x * fieldWidth, _cellSize.y * fieldHeight);
+      _cellSize = _cellPrefab.Size;
+      _fieldSize = new Vector2(_cellSize.x * (fieldWidth + 1), _cellSize.y * (fieldHeight + 1));
 
       _cells = new T[fieldWidth, fieldHeight];
-      T cell;
+
+      CellModel cellModel;
+      T cellObject;
 
       for (int i = 0; i < fieldWidth; i++)
       {
         for (int j = 0; j < fieldHeight; j++)
         {
-          if (cellsData[i, j] != null) {
-            cell = CreateCell(i, j, fieldWidth, fieldHeight);
-            SetCellData(cell, i, j, cellsData);
-            _cells[i, j] = cell;
+          cellModel = fieldModel[i, j];
+          if (CanProcessCell(cellModel)) {
+            cellObject = CreateCell(cellModel.Index, fieldWidth, fieldHeight);
+            SetCellData(cellObject, cellModel.Index, fieldModel);
+            _cells[i, j] = cellObject;
           }
         }
       }
     }
 
-    abstract protected void SetCellData(T cellObject, int indexX, int indexY, Vertex[,] cellsData);
+    abstract protected void SetCellData(T cellObject, Vector2Int index, CellModel[,] cellsData);
 
-    private T CreateCell(int indexX, int indexY, int fieldWidth, int fieldHeight)
+    virtual protected bool CanProcessCell(CellModel cellModel)
+    {
+      return cellModel != null;
+    }
+
+    private T CreateCell(Vector2Int index, int fieldWidth, int fieldHeight)
     {
       T cellObject = Instantiate<T>(_cellPrefab);
-      cellObject.name = $"{_cellPrefab.name} ({indexX}:{indexY})";
+      cellObject.name = $"{_cellPrefab.name} ({index.x}:{index.y})";
       cellObject.transform.SetParent(transform);
       cellObject.transform.localScale = Vector3.one;
 
-      float posX = _cellSize.x * indexX - (_fieldSize.x - _cellSize.x) * 0.5f;
-      float posY = _cellSize.y * indexY - (_fieldSize.y - _cellSize.y) * 0.5f;
+      float posX = _cellSize.x * (index.x + 1) - _fieldSize.x * 0.5f;
+      float posY = _cellSize.y * (index.y + 1) - _fieldSize.y * 0.5f;
       cellObject.transform.localPosition = new Vector2(posX, posY);
 
       return cellObject;
@@ -64,7 +78,7 @@ namespace com.MazeGame.View.Field
       {
         foreach (T cell in _cells)
         {
-          cell.Destroy();
+          cell?.Destroy();
         }
         _cells = null;
       }
