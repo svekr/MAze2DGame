@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace com.MazeGame.View.Field
 {
+  [AddComponentMenu("Layout/Child Transform Scale Fitter")]
   [RequireComponent(typeof(RectTransform))]
   public class ChildTransformScaleFitter: UIBehaviour
   {

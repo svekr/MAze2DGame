@@ -19,27 +19,30 @@ namespace com.MazeGame.View
     {
       _logger = logger;
       _controller = controller;
-      _mazeView.Initialize(controller.LevelModel.FieldModel);
+      _mazeView.Initialize(controller.LevelModel);
       _uiView.Initialize(logger, controller);
+      StartListenController();
     }
 
     public void Release()
     {
+      StopListenController();
       _uiView.Release();
     }
 
     public void UpdatePlayerPosition()
     {
-
+      _mazeView.UpdatePlayerPosition(_controller.LevelModel);
     }
 
     private void StartListenController()
     {
+      _controller.OnPlayerPositionChanged += UpdatePlayerPosition;
     }
 
     private void StopListenController()
     {
-
+      _controller.OnPlayerPositionChanged -= UpdatePlayerPosition;
     }
   }
 }

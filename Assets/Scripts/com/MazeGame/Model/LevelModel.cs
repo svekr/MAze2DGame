@@ -1,3 +1,4 @@
+using UnityEngine;
 using com.Managers.Levels.Model;
 
 namespace com.MazeGame.Model
@@ -9,6 +10,8 @@ namespace com.MazeGame.Model
     public CellModel[,] FieldModel { get; private set; } = null;
 
     public int Duration { get; private set; } = 0;
+
+    public Vector2Int PlayerPosition { get; set; }
 
     public LevelModel(int id, CellModel[,] fieldModel, int duration) {
       Id = id;

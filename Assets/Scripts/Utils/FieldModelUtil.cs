@@ -1,4 +1,5 @@
 using com.MazeGame.Model;
+using UnityEngine;
 
 namespace Utils
 {
@@ -52,6 +53,17 @@ namespace Utils
         default:
           return direction;
       }
+    }
+
+    static public Vector2Int GetMovement(Direction direction, int distance = 1)
+    {
+      int x = 0;
+      int y = 0;
+      if (direction.HasFlag(Direction.Up)) y += distance;
+      if (direction.HasFlag(Direction.Right)) x += distance;
+      if (direction.HasFlag(Direction.Down)) y -= distance;
+      if (direction.HasFlag(Direction.Left)) x -= distance;
+      return new Vector2Int(x, y);
     }
   }
 }

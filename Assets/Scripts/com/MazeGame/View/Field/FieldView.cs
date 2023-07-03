@@ -1,5 +1,6 @@
 using UnityEngine;
 using com.MazeGame.Model;
+using com.MazeGame.View.Field.Player;
 
 namespace com.MazeGame.View.Field
 {
@@ -9,11 +10,23 @@ namespace com.MazeGame.View.Field
     private RectTransform _layersContainer;
     [SerializeField]
     private CellsView[] _layers;
+    [SerializeField]
+    private RectTransform _playerContainer;
+    [SerializeField]
+    private PlayerView _playerPrefab;
 
-    public void Initialize(CellModel[,] fieldModel)
+    private PlayerView _player;
+
+    public void Initialize(LevelModel levelModel)
     {
-      InitializeLayers(fieldModel);
+      InitializeLayers(levelModel.FieldModel);
       UpdateFieldSize(_layers[0].Size);
+      InitializePlayer(levelModel.PlayerPosition);
+    }
+
+    public void UpdatePlayerPosition(LevelModel levelModel)
+    {
+      _player.UpdatePosition(levelModel.PlayerPosition);
     }
 
     private void InitializeLayers(CellModel[,] fieldModel)
@@ -32,6 +45,13 @@ namespace com.MazeGame.View.Field
       Vector2 parentSize = _layersContainer.parent.GetComponent<RectTransform>().rect.size;
       float scale = Mathf.Min(parentSize.x / size.x, parentSize.y / size.y);
       _layersContainer.localScale = Vector3.one * scale;
+    }
+
+    private void InitializePlayer(Vector2Int position)
+    {
+      _player = GameObject.Instantiate<PlayerView>(_playerPrefab, _playerContainer);
+      _player.name = _playerPrefab.name;
+      _player.SetPosition(position);
     }
   }
 }

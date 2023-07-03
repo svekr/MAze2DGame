@@ -32,6 +32,8 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
+    - {fileID: 102900000, guid: c7c102a356fd73342a12250f4204a4f1, type: 3}
+    - {fileID: 102900000, guid: 869c77910cfe84045aafba1109748ad4, type: 3}
     - {fileID: 2800000, guid: 929b65bce5fa64d4cb746e9066fdfc2c, type: 3}
     - {fileID: 2800000, guid: 18bae6e87b03db544a453756173051a9, type: 3}
     - {fileID: 2800000, guid: f35357252d8373e40b772894670aa455, type: 3}
@@ -41,43 +43,130 @@ SpriteAtlas:
     - {fileID: 2800000, guid: ae662ca44aa35fc48bbafae82b4bb89f, type: 3}
     - {fileID: 2800000, guid: 979cecd5e24f8954e9c70a4a0fdeda57, type: 3}
     - {fileID: 2800000, guid: c6beca0b9b98a8840a06131d32d874a5, type: 3}
-    - {fileID: 102900000, guid: c7c102a356fd73342a12250f4204a4f1, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: fbd839007e580d9478d7adbbb5d6cc97, type: 3}
+  - {fileID: 21300000, guid: a6beb180e7491d34cb20c394b714af87, type: 3}
   - {fileID: 21300000, guid: 1d2d8090c921c114ab973d56fbf1a092, type: 3}
+  - {fileID: 21300000, guid: cf5393b03bc812a4d8b3dfea2eb5b132, type: 3}
+  - {fileID: 21300000, guid: 5e09c6b1aac036b4e924d0dd2deefe16, type: 3}
+  - {fileID: 21300000, guid: f89ce5522b1401840ba7cdca9c437cac, type: 3}
+  - {fileID: 21300000, guid: 159a2972ebf8d2e42b0c3086b5ef28b6, type: 3}
+  - {fileID: 21300000, guid: 9bdf919262c84784a869fdbc566f00e2, type: 3}
+  - {fileID: 21300000, guid: adcf42f2334db4047b5207378745f521, type: 3}
+  - {fileID: 21300000, guid: 8c2a6e735e3a64a4ab9c6a2002f7a2d2, type: 3}
+  - {fileID: 21300000, guid: a49070649851afd408aafe3b239d2d22, type: 3}
+  - {fileID: 21300000, guid: 69328484023c1a04e8eb80922537b953, type: 3}
+  - {fileID: 21300000, guid: 2afc2aa4670b69a4fb2f6da21cea50b2, type: 3}
   - {fileID: 21300000, guid: ae662ca44aa35fc48bbafae82b4bb89f, type: 3}
+  - {fileID: 21300000, guid: 70b7c2c494895fc4da072db411e99be0, type: 3}
+  - {fileID: 21300000, guid: e6b825d4a23be4546baac6ad934be3af, type: 3}
   - {fileID: 21300000, guid: f35357252d8373e40b772894670aa455, type: 3}
+  - {fileID: 21300000, guid: 9d7fcf35f6de55745a095c64cfc0178c, type: 3}
   - {fileID: 21300000, guid: 979cecd5e24f8954e9c70a4a0fdeda57, type: 3}
+  - {fileID: 21300000, guid: 485de2067f4240546b06703aff72a6a2, type: 3}
+  - {fileID: 21300000, guid: c4fe8b566b4ee7146a8cb4a0d049fc3c, type: 3}
   - {fileID: 21300000, guid: 1b698b8693739754ca40891c6d212f59, type: 3}
   - {fileID: 21300000, guid: a14b5e9677a172d45983746b3e630050, type: 3}
+  - {fileID: 21300000, guid: e74a14d6ee604e94c8a4ae2cb9ecc851, type: 3}
+  - {fileID: 21300000, guid: 3c68b9f6d60de804c945ac441b57b880, type: 3}
+  - {fileID: 21300000, guid: fe41a52727f197249a9cdc23e813b981, type: 3}
+  - {fileID: 21300000, guid: d462f45808fd9b545bc39ba1cd72f762, type: 3}
   - {fileID: 21300000, guid: d1c16d586ddc9d342822f2b369d9ae2d, type: 3}
+  - {fileID: 21300000, guid: 4d397268bddddd94e8bafe5250a25ce3, type: 3}
+  - {fileID: 21300000, guid: debea68803030e24b9bc50058cdf8c15, type: 3}
+  - {fileID: 21300000, guid: 8356c2b8ec0194f4da08ba96f26c460c, type: 3}
+  - {fileID: 21300000, guid: f7008eb804b08ce49b8d32743b87a525, type: 3}
+  - {fileID: 21300000, guid: 784a23d8f2e055345a978daf9b3554a0, type: 3}
+  - {fileID: 21300000, guid: 3d6c1fd8b56fadc4ebbc48f4de8c514c, type: 3}
   - {fileID: 21300000, guid: 18bae6e87b03db544a453756173051a9, type: 3}
+  - {fileID: 21300000, guid: 175a88f83957d144c91fded796e3990f, type: 3}
+  - {fileID: 21300000, guid: 5b462139d2e032041a5eaf39f0aa78a8, type: 3}
+  - {fileID: 21300000, guid: 4108cfe91ff817247967fc5beb6dd02c, type: 3}
+  - {fileID: 21300000, guid: 4759834ada0e859459196445a6061bc5, type: 3}
+  - {fileID: 21300000, guid: 10131f6a90e66e34b8199c20d6bd05d0, type: 3}
   - {fileID: 21300000, guid: 62d2b09a7ac1db341b9b5ef917785ec0, type: 3}
   - {fileID: 21300000, guid: c6beca0b9b98a8840a06131d32d874a5, type: 3}
+  - {fileID: 21300000, guid: b7e3d98bb72b501439a471422b393ba1, type: 3}
   - {fileID: 21300000, guid: 8bd43b8bcd6532f4199b596e7d2a2146, type: 3}
+  - {fileID: 21300000, guid: 695b650c6e69f5b40b9bb0c51c298255, type: 3}
+  - {fileID: 21300000, guid: b5970b4cd3335a8459199e84dc7f9cf3, type: 3}
   - {fileID: 21300000, guid: 5ef1969c96b9bae47984cd4ed7dbcde3, type: 3}
   - {fileID: 21300000, guid: 929b65bce5fa64d4cb746e9066fdfc2c, type: 3}
+  - {fileID: 21300000, guid: 89a708ec81c8ba24abb4c63238143586, type: 3}
+  - {fileID: 21300000, guid: 24999b1d1b686f44c9addd1c74272d6e, type: 3}
+  - {fileID: 21300000, guid: e9a4025df573c9a43b45b339426fe2fe, type: 3}
+  - {fileID: 21300000, guid: 9fdb517eb0d292d439c095d545526a41, type: 3}
+  - {fileID: 21300000, guid: ad05737ea8c03d949af997f3e11a019f, type: 3}
+  - {fileID: 21300000, guid: a28d319ebcc1c15499588a0eca98ee70, type: 3}
+  - {fileID: 21300000, guid: d1848e0fb01e9194cbdb7edba32817e0, type: 3}
+  - {fileID: 21300000, guid: 1f1eecafd3565f940b1ffeed5b4c6b11, type: 3}
   - {fileID: 21300000, guid: 5e0622cf350448c42bbe436718f8afe5, type: 3}
   - {fileID: 21300000, guid: 770e29df2bea8784099cb484b34e445c, type: 3}
+  - {fileID: 21300000, guid: 6c4181fff92c7fc41aaca7d884f7f70d, type: 3}
   m_PackedSpriteNamesToIndex:
+  - pers_up 7
+  - pers_right 3
   - Lightning_02
+  - pers_right
+  - pers_up 3
+  - pers_down 9
+  - pers_left 3
+  - pers_down 1
+  - pers_down 10
+  - pers_up 2
+  - pers_up
+  - pers_up 10
+  - pers_left 1
   - greenCircleButton
+  - pers_left 10
+  - pers_left 5
   - WallCornerOuter
+  - pers_up 8
   - Arrow
+  - pers_left 6
+  - pers_right 5
   - Lightning_04
   - GlowCircle
+  - pers_right 6
+  - pers_up 5
+  - pers_right 10
+  - pers_down 7
   - Lightning_01
+  - pers_up 6
+  - pers_right 2
+  - pers_down
+  - pers_right 4
+  - pers_left 8
+  - pers_down 2
   - WallCornerInner
+  - pers_right 8
+  - pers_right 7
+  - pers_down 4
+  - pers_left 7
+  - pers_left
   - Lightning_03
   - close
+  - pers_down 6
   - Lightning_06
+  - pers_up 9
+  - pers_down 8
   - PanelBackground
   - Background
+  - pers_down 5
+  - pers_right 1
+  - pers_left 4
+  - pers_up 1
+  - pers_right 9
+  - pers_up 4
+  - pers_down 3
+  - pers_left 9
   - WallLine
   - Lightning_05
+  - pers_left 2
   m_RenderDataMap: {}
   m_Tag: Ingame
   m_IsVariant: 0

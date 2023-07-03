@@ -1,5 +1,7 @@
 using System;
+using UnityEngine;
 using com.MazeGame.Model;
+using Utils;
 
 namespace com.MazeGame.Controller {
   public class MazeGameController: IMazeGameController
@@ -8,7 +10,9 @@ namespace com.MazeGame.Controller {
     public event Action<long> OnTimeRemainChanged;
     public event Action<int> OnDistancePassedChanged;
     public event Action<bool> OnPausedChanged;
+    public event Action OnPlayerPositionChanged;
     public event Action OnLevelFailed;
+    public event Action OnLevelWin;
 
     private readonly ILogger _logger;
     private readonly string _name;
@@ -45,6 +49,7 @@ namespace com.MazeGame.Controller {
     {
       _logger?.Log($"{Name}.PlayLevel(levelId = {level.Id})");
       LevelModel = level;
+      InitPlayerPosition(LevelModel);
       _endLevelHandler = onEndLevel;
       Reset();
     }
@@ -81,6 +86,30 @@ namespace com.MazeGame.Controller {
       }
     }
 
+    public void MovePlayer(Direction direction)
+    {
+      if (Paused)
+      {
+        return;
+      }
+      CellModel cell = GetCurrentCell();
+      if ((cell.Directions | cell.Gates).HasFlag(direction))
+      {
+        Vector2Int newPosition = LevelModel.PlayerPosition + FieldModelUtil.GetMovement(direction);
+        _logger?.Log($"{Name}.MovePlayer {direction} from {LevelModel.PlayerPosition} to {newPosition}");
+        LevelModel.PlayerPosition = newPosition;
+        UpdateDistancePassed();
+        OnPlayerPositionChanged?.Invoke();
+      }
+      if (cell.Gates.HasFlag(direction))
+      {
+        _logger?.Log($"{Name}.MovePlayer to gates. Level complete");
+        Paused = true;
+        _endLevelHandler?.Invoke(true);
+        OnLevelWin?.Invoke();
+      }
+    }
+
     private void UpdateElapsedTime()
     {
       TimeElapsed++;
@@ -98,6 +127,7 @@ namespace com.MazeGame.Controller {
       if (TimeRemain == 0)
       {
         Paused = true;
+        _endLevelHandler?.Invoke(false);
         OnLevelFailed?.Invoke();
       }
     }
@@ -106,6 +136,18 @@ namespace com.MazeGame.Controller {
     {
       DistancePassed++;
       OnDistancePassedChanged?.Invoke(DistancePassed);
+    }
+
+    private void InitPlayerPosition(LevelModel level)
+    {
+      int x = level.FieldModel.GetLength(0) / 2;
+      int y = level.FieldModel.GetLength(1) / 2;
+      level.PlayerPosition = new UnityEngine.Vector2Int(x, y);
+    }
+
+    private CellModel GetCurrentCell()
+    {
+      return LevelModel.FieldModel[LevelModel.PlayerPosition.x, LevelModel.PlayerPosition.y];
     }
   }
 }

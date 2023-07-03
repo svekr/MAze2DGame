@@ -21,7 +21,16 @@ namespace com.Managers.Levels.Controller
 
     public object GetLevelSettings(int id)
     {
-      return _levels?.Find(level => level?.Id == id);
+      LevelSettingsBase level = _levels?.Find(level => level?.Id == id);
+      if (level != null)
+      {
+        return level;
+      }
+      if (_levels != null && _levels.Count > 0)
+      {
+        return _levels[_levels.Count - 1];
+      }
+      return null;
     }
 
     private List<LevelSettingsBase> PrepareLevels(List<LevelSettingsBase> levels)

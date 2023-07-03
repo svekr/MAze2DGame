@@ -52,6 +52,7 @@ namespace com.MazeGame.View.UI
       _controller.OnTimeRemainChanged += UpdateRemainTime;
       _controller.OnDistancePassedChanged += UpdateDistancePassed;
       _controller.OnLevelFailed += OnLevelFailed;
+      _controller.OnLevelWin += OnLevelWin;
     }
 
     private void StopListenController()
@@ -60,6 +61,7 @@ namespace com.MazeGame.View.UI
       _controller.OnTimeRemainChanged -= UpdateRemainTime;
       _controller.OnDistancePassedChanged -= UpdateDistancePassed;
       _controller.OnLevelFailed -= OnLevelFailed;
+      _controller.OnLevelWin -= OnLevelWin;
     }
 
     private void UpdateElapsedTime(long seconds)
@@ -80,6 +82,11 @@ namespace com.MazeGame.View.UI
     private void OnLevelFailed()
     {
       _loseLevelDecoration.SetActive(true);
+    }
+
+    private void OnLevelWin()
+    {
+      _winLevelDecoration.SetActive(true);
     }
   }
 }

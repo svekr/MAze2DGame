@@ -1,8 +1,10 @@
 using UnityEngine;
+using com.Managers.Input;
 using com.Managers.Levels.Controller;
+using com.MazeGame.Model;
 using com.Managers.SceneManagement;
 using com.Managers.TaskStarter;
-using com.MazeGame.Model;
+using com.Managers.UserData.Controller;
 using com.MazeGame.View;
 using com.Settings;
 
@@ -37,23 +39,32 @@ namespace com.MazeGame.Controller
     override protected void DestroyHandler()
     {
       _mazeGameView?.Release();
+      Main.Managers.InputManager.OnInputMovement -= _mazeGameController.MovePlayer;
     }
 
     override protected void SceneReadyHandler()
     {
-      _mazeGameController?.SetPaused(false);
+      if (_mazeGameController != null)
+      {
+        Main.Managers.InputManager.OnInputMovement -= _mazeGameController.MovePlayer;
+        Main.Managers.InputManager.OnInputMovement += _mazeGameController.MovePlayer;
+        _mazeGameController.SetPaused(false);
+      }
     }
 
     private void InitializeManagers()
     {
       TaskStarter managersStarter = new TaskStarter(Logger);
+      managersStarter.AppendTask(new UserDataManagerInitializer(Logger));
       managersStarter.AppendTask(new MazeLevelsManagerInitializer(_gameSettings?.Levels));
+      managersStarter.AppendTask(new InputManagerInitializer());
       managersStarter.Start(InitializeGame);
     }
 
     private void InitializeGame()
     {
-      int levelId = 1;
+      int levelId = Main.Managers.UserDataManager.Level;
+      Main.Managers.UserDataManager.IsLastLevelWin = false;
       LevelModel level = Main.Managers.MazeLevelsManager.GetLevel(levelId);
       if (level == null)
       {
@@ -61,17 +72,28 @@ namespace com.MazeGame.Controller
         return;
       }
       _mazeGameController ??= new MazeGameController(Logger);
-      _mazeGameController.PlayLevel(level, null);
+      _mazeGameController.PlayLevel(level, OnEndLevel);
       _mazeGameView.Initialize(Logger, _mazeGameController);
       if (_isFirstScene)
       {
-        _mazeGameController.Paused = false;
+        SceneReadyHandler();
+      }
+    }
+
+    private void OnEndLevel(bool isWin)
+    {
+      if (isWin)
+      {
+        Main.Managers.UserDataManager.LevelComplete(_mazeGameController.TimeElapsed, _mazeGameController.DistancePassed);
+        Main.Managers.UserDataManager.IsLastLevelWin = true;
       }
     }
 
     private void Update()
     {
-      _mazeGameController?.OnTimeUpdate(Time.deltaTime);
+      float deltaTime = Time.deltaTime;
+      Main.Managers.InputManager.OnTimeUpdate(deltaTime);
+      _mazeGameController?.OnTimeUpdate(deltaTime);
     }
   }
 }

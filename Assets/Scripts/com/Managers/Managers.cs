@@ -1,11 +1,17 @@
 using System;
+using com.Managers.Input;
 using com.Managers.Levels.Controller;
+using com.Managers.UserData.Controller;
 
 namespace com.Managers
 {
   public class Managers
   {
+    public UserDataManager UserDataManager { get; private set; }
+
     public MazeLevelsManager MazeLevelsManager { get; private set; }
+
+    public InputManager InputManager { get; private set; }
 
     public void SetManager<T>(T manager)
     {
