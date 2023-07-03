@@ -1,4 +1,6 @@
 using UnityEngine;
+using com.MazeGame.Model;
+using Utils;
 
 namespace com.MazeGame.View.Field.Player
 {
@@ -19,8 +21,15 @@ namespace com.MazeGame.View.Field.Player
       _transform.localPosition = new Vector2(x, y);
     }
 
+    private string _trigger;
     public void UpdatePosition(Vector2Int position)
     {
+      if (_animator != null)
+      {
+        Direction direction = FieldModelUtil.GetDirectionByPosition(_position, position);
+        string clipName = $"PlayerMove{direction}Animation";
+        _animator.Play(clipName, 0, 0);
+      }
       SetPosition(position);
     }
   }

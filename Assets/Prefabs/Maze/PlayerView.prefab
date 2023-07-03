@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transform: {fileID: 1696451569175402887}
-  _animator: {fileID: 0}
+  _animator: {fileID: 5984575522627721496}
 --- !u!95 &5984575522627721496
 Animator:
   serializedVersion: 5
@@ -139,7 +139,7 @@ Animator:
   m_GameObject: {fileID: 2900045033203480654}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc887bd709a97b84a9d43de6fd09bddc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

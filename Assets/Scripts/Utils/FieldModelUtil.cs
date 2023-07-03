@@ -65,5 +65,15 @@ namespace Utils
       if (direction.HasFlag(Direction.Left)) x -= distance;
       return new Vector2Int(x, y);
     }
+
+    static public Direction GetDirectionByPosition(Vector2Int oldPosition, Vector2Int newPosition)
+    {
+      Direction result = Direction.None;
+      if (newPosition.y > oldPosition.y) result |= Direction.Up;
+      if (newPosition.x > oldPosition.x) result |= Direction.Right;
+      if (newPosition.y < oldPosition.y) result |= Direction.Down;
+      if (newPosition.x < oldPosition.x) result |= Direction.Left;
+      return result;
+    }
   }
 }
